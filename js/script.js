@@ -18,6 +18,11 @@
 for(let i = 0 ; i < 100 ; i++){
     let boxNumber = i + 1;
 
+    if(!(boxNumber % 3)){
+        boxNumber = "Frizz";
+    }else if(!(boxNumber % 5)){
+        boxNumber = "FrizzBuzz";
+    }
 
     console.log(boxNumber); 
 }
