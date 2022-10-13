@@ -14,6 +14,8 @@
 // Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 // Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 
+const boxCol = document.getElementById("sc-col");
+
 
 for(let i = 0 ; i < 100 ; i++){
     let boxNumber = i + 1;
@@ -26,5 +28,12 @@ for(let i = 0 ; i < 100 ; i++){
         boxNumber = "Buzz";
     }
 
-    console.log(boxNumber); 
+    const div = document.createElement("div");
+
+    div.classList.add("sc-box");
+    div.innerHTML = boxNumber;
+
+    boxCol.append(div);
+
+    
 }
